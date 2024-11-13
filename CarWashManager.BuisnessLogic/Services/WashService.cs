@@ -23,12 +23,12 @@ public class WashService : IWashService
         return washes.Select(e => new WashDto(
             washId: e.WashId,
             washType: e.Type,
-            detergent: e.Detergent, 
+            detergent: e.Detergent,
             serviceType: e.ServiceType,
             serviceName: e.ServiceName,
             amount: e.Amount,
             washTime: e.WashTime,
-            startTime: DateTime.UtcNow 
+            startTime: DateTime.UtcNow
         )).ToList().AsReadOnly();
     }
 
@@ -41,12 +41,12 @@ public class WashService : IWashService
         return new WashDto(
             washId: wash.WashId,
             washType: wash.Type,
-            detergent: wash.Detergent, 
+            detergent: wash.Detergent,
             serviceType: wash.ServiceType,
             serviceName: wash.ServiceName,
             amount: wash.Amount,
             washTime: wash.WashTime,
-            startTime: DateTime.UtcNow 
+            startTime: DateTime.UtcNow
         );
     }
 
@@ -58,14 +58,13 @@ public class WashService : IWashService
         await _washRepository.Create(new WashEntity
         {
             WashId = wash.WashId,
-            Type = wash.WashType, 
+            Type = wash.WashType,
             ServiceType = wash.ServiceType,
             ServiceName = wash.ServiceName,
             Amount = wash.Amount,
             WashTime = DateTime.UtcNow
         });
     }
-
 
     public async Task Update(WashDto wash)
     {
@@ -90,5 +89,34 @@ public class WashService : IWashService
 
         await _washRepository.Delete(washId);
     }
-}
 
+    public async Task<WashDto> CloneWash(string washId)
+    {
+        var existingWash = await _washRepository.Get(washId);
+        if (existingWash == null)
+            throw new InvalidOperationException($"Wash with Id {washId} not found.");
+
+        var clonedWash = new WashDto(
+            washId: Guid.NewGuid().ToString(),
+            washType: existingWash.Type,
+            detergent: existingWash.Detergent,
+            serviceType: existingWash.ServiceType,
+            serviceName: existingWash.ServiceName,
+            amount: existingWash.Amount,
+            washTime: existingWash.WashTime,
+            startTime: DateTime.UtcNow 
+        );
+
+        await _washRepository.Create(new WashEntity
+        {
+            WashId = clonedWash.WashId,
+            Type = clonedWash.WashType,
+            ServiceType = clonedWash.ServiceType,
+            ServiceName = clonedWash.ServiceName,
+            Amount = clonedWash.Amount,
+            WashTime = clonedWash.WashTime
+        });
+
+        return clonedWash;
+    }
+}

@@ -1,0 +1,11 @@
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\bin\Debug\net6.0\CarWashManager.Infrastructure.deps.json
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\bin\Debug\net6.0\CarWashManager.Infrastructure.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\bin\Debug\net6.0\CarWashManager.Infrastructure.pdb
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\CarWashManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\CarWashManager.Infrastructure.AssemblyInfoInputs.cache
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\CarWashManager.Infrastructure.AssemblyInfo.cs
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\CarWashManager.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\CarWashManager.Infrastructure.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\refint\CarWashManager.Infrastructure.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\CarWashManager.Infrastructure.pdb
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.Infrastructure\obj\Debug\net6.0\ref\CarWashManager.Infrastructure.dll

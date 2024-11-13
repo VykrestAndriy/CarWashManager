@@ -4,29 +4,13 @@ using CarWashManager.Infrastructure.Enums;
 
 namespace CarWashManager.DataAccess.Entities
 {
-    // Успадковуємо від DbContext
     public class WashContext : DbContext
     {
-        // DbSet для кожної сутності
         public DbSet<WashEntity> Washs { get; set; }
         public DbSet<TransactionEntity> Transactions { get; set; }
 
-        // Конструктор, який передає опції у базовий клас
-        public WashContext(DbContextOptions<WashContext> options) : base(options)
-        {
-        }
-
-        // Конфігурація моделей
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            // Тут можна налаштувати додаткові правила для моделі (якщо потрібно)
-        }
-
-        // Цей метод для початкових даних не є необхідним для EF, якщо ви використовуєте реальну базу даних
-        // Проте ви можете додати ці початкові дані через міграції або вручну
         public static void Seed(WashContext context)
         {
-            // Якщо потрібна ініціалізація даних, ви можете це зробити тут
             context.Washs.AddRange(
                 new WashEntity
                 {

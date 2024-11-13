@@ -1,14 +1,25 @@
 using CarWashManager.BusinessLogic.Installers;
 using CarWashManager.DataAccess.Installers;
+using CarWashManager.BuisnessLogic.Singleton;
+using CarWashManager.BusinessLogic.Contracts;
+using CarWashManager.BusinessLogic.Services;
+using CarWashManager.DataAccess.RepositoriesWash.Wash;
+using CarWashManager.DataAccess.Entities;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<SingletonInstance>();
+builder.Services.AddScoped<IWashRepository, WashRepository>();
+builder.Services.AddScoped<IWashService, WashService>();
+builder.Services.AddScoped<WashContext>();
+builder.Services.AddScoped<IWashRepository, WashRepository>();
 
 var app = builder.Build();
 
@@ -20,9 +31,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

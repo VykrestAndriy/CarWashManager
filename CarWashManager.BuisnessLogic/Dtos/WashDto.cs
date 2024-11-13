@@ -7,13 +7,10 @@ using CarWashManager.Infrastructure.Enums;
 
 namespace CarWashManager.BusinessLogic.Dtos;
 
-public class WashDto : IEquatable<WashDto>
+public class WashDto : IEquatable<WashDto>, ICloneable
 {
     public static readonly WashDto Default
-    = new WashDto(string.Empty, WashType.FullService, string.Empty, ServiceType.ExteriorWash, string.Empty, decimal.Zero, DateTime.MinValue, DateTime.MinValue);
-
-
-
+        = new WashDto(string.Empty, WashType.FullService, string.Empty, ServiceType.ExteriorWash, string.Empty, decimal.Zero, DateTime.MinValue, DateTime.MinValue);
 
     public string WashId { get; }
     public WashType WashType { get; }
@@ -24,7 +21,6 @@ public class WashDto : IEquatable<WashDto>
     public string Detergent { get; set; }
     public DateTime StartTime { get; }
 
-
     public WashDto(string washId, WashType washType, string detergent, ServiceType serviceType, string serviceName, decimal amount, DateTime washTime, DateTime startTime)
     {
         WashId = washId;
@@ -34,9 +30,27 @@ public class WashDto : IEquatable<WashDto>
         ServiceName = serviceName;
         Amount = amount;
         WashTime = washTime;
-        StartTime = startTime; 
+        StartTime = startTime;
     }
 
+    public WashDto Clone()
+    {
+        return new WashDto(
+            this.WashId,
+            this.WashType,
+            this.Detergent,
+            this.ServiceType,
+            this.ServiceName,
+            this.Amount,
+            this.WashTime,
+            this.StartTime
+        );
+    }
+
+    object ICloneable.Clone()
+    {
+        return Clone();
+    }
 
     public bool Equals(WashDto? other)
     {

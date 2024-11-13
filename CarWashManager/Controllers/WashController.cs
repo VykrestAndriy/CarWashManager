@@ -2,6 +2,7 @@
 using CarWashManager.BusinessLogic.Contracts;
 using CarWashManager.BusinessLogic.Dtos;
 using CarWashManager.Models.Washs;
+using CarWashManager.BuisnessLogic.Singleton;
 
 namespace CarWashManager.Controllers;
 
@@ -11,11 +12,13 @@ public class WashController : ControllerBase
 {
     private readonly ILogger<WashController> _logger;
     private readonly IWashService _washService;
+    private readonly SingletonInstance _singletonInstance;
 
-    public WashController(ILogger<WashController> logger, IWashService washService)
+    public WashController(ILogger<WashController> logger, IWashService washService, SingletonInstance singletonInstance)
     {
         _logger = logger;
         _washService = washService;
+        _singletonInstance = singletonInstance;
     }
 
     [HttpGet("get", Name = "GetWash")]
@@ -55,7 +58,7 @@ public class WashController : ControllerBase
             washId: Guid.NewGuid().ToString(),
             washType: request.WashType,
             detergent: request.Detergent,
-            serviceType: request.ServiceType,  
+            serviceType: request.ServiceType,
             serviceName: "Default Service",
             washTime: request.WashTime,
             amount: request.Amount,
@@ -80,8 +83,8 @@ public class WashController : ControllerBase
             washId: request.WashId,
             washType: request.WashType,
             detergent: request.Detergent,
-            serviceType: request.ServiceType, 
-            serviceName: request.ServiceName, 
+            serviceType: request.ServiceType,
+            serviceName: request.ServiceName,
             washTime: request.WashTime,
             amount: request.Amount,
             startTime: DateTime.UtcNow);
@@ -113,5 +116,33 @@ public class WashController : ControllerBase
             _logger.LogError(ex, $"Failed to delete wash with ID = {WashId}");
             return BadRequest();
         }
+    }
+
+    [HttpPost("clone/{WashId}")]
+    public async Task<ActionResult<WashDto>> CloneWash([FromRoute] string WashId)
+    {
+        try
+        {
+            var originalWash = await _washService.Get(WashId);
+            if (originalWash == null)
+            {
+                return NotFound($"Wash with ID {WashId} not found.");
+            }
+
+            var clonedWash = originalWash.Clone();
+            return Ok(clonedWash);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, $"Failed to clone wash with ID = {WashId}");
+            return BadRequest();
+        }
+    }
+
+    [HttpGet("singleton-action")]
+    public ActionResult SingletonAction()
+    {
+        _singletonInstance.ExecuteAction();
+        return Ok("Singleton action executed.");
     }
 }
