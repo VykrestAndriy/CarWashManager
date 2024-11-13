@@ -1,0 +1,17 @@
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.BuisnessLogic.deps.json
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.BuisnessLogic.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.BuisnessLogic.pdb
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.DataAccess.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.Infrastructure.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.DataAccess.pdb
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\bin\Debug\net6.0\CarWashManager.Infrastructure.pdb
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.csproj.AssemblyReference.cache
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.AssemblyInfoInputs.cache
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.AssemblyInfo.cs
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.csproj.CoreCompileInputs.cache
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashM.7FD710B0.Up2Date
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\refint\CarWashManager.BuisnessLogic.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\CarWashManager.BuisnessLogic.pdb
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager.BuisnessLogic\obj\Debug\net6.0\ref\CarWashManager.BuisnessLogic.dll
