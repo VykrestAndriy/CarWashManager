@@ -51,4 +51,42 @@ public class WashRepository : IWashRepository
         }
         return Task.CompletedTask;
     }
+
+    // Реалізація методу GetAllTransactions
+    public Task<ReadOnlyCollection<TransactionEntity>> GetAllTransactions()
+    {
+        // Припустимо, що у вашому контексті є DbSet<TransactionEntity>
+        return Task.FromResult(_context.Transactions.ToList().AsReadOnly());
+    }
+
+    // Інші методи для роботи з транзакціями
+    public Task<TransactionEntity?> GetTransactionById(string transactionId) =>
+        Task.FromResult(_context.Transactions.FirstOrDefault(e => e.TransactionId == transactionId));
+
+    public Task CreateTransaction(TransactionEntity transactionEntity)
+    {
+        _context.Transactions.Add(transactionEntity);
+        return Task.CompletedTask;
+    }
+
+    public Task DeleteTransaction(string transactionId)
+    {
+        var entity = _context.Transactions.FirstOrDefault(e => e.TransactionId == transactionId);
+        if (entity != null)
+        {
+            _context.Transactions.Remove(entity);
+        }
+        return Task.CompletedTask;
+    }
+
+    public Task<ReadOnlyCollection<TransactionEntity>> GetTodayTransactions()
+    {
+        var today = DateTime.UtcNow.Date;
+        var transactionsToday = _context.Transactions
+            .Where(t => t.TransactionDate.Date == today)
+            .ToList()
+            .AsReadOnly();
+
+        return Task.FromResult(transactionsToday);
+    }
 }

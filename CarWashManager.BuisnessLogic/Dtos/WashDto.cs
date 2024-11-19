@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CarWashManager.Infrastructure.Enums;
 
 namespace CarWashManager.BusinessLogic.Dtos;
@@ -57,13 +53,18 @@ public class WashDto : IEquatable<WashDto>, ICloneable
         if (other == null)
             return false;
 
-        return WashId == other.WashId && WashType == other.WashType && ServiceType == other.ServiceType
-            && ServiceName == other.ServiceName && Amount == other.Amount && WashTime == other.WashTime;
+        return string.Equals(WashId, other.WashId) &&
+               WashType == other.WashType &&
+               ServiceType == other.ServiceType &&
+               string.Equals(ServiceName, other.ServiceName) &&
+               Amount == other.Amount &&
+               WashTime == other.WashTime &&
+               string.Equals(Detergent, other.Detergent) &&
+               StartTime == other.StartTime;
     }
 
     public override int GetHashCode()
     {
-        return (WashId.GetHashCode() + WashType.GetHashCode() + ServiceType.GetHashCode()
-            + ServiceName.GetHashCode() + Amount.GetHashCode() + WashTime.GetHashCode()) * 45;
+        return HashCode.Combine(WashId, WashType, ServiceType, ServiceName, Amount, WashTime, Detergent, StartTime);
     }
 }

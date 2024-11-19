@@ -51,7 +51,7 @@
         "StatusCode": 200
       }
     ],
-    "EndpointName": "GetCarWashTransaction"
+    "EndpointName": "GetCarWashTransactions"
   },
   {
     "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
@@ -100,6 +100,23 @@
       }
     ],
     "EndpointName": "GetTodayCarWashTransactions"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "ProcessTransaction",
+    "RelativePath": "CarWashManager/processCarWashTransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CarWashManager.Models.Washs.CreateWashRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ProcessCarWashTransaction"
   },
   {
     "ContainingType": "CarWashManager.Controllers.WashController",

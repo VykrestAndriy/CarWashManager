@@ -8,4 +8,7 @@ public class TransactionEntity
     public TransactionType TransactionType { get; set; }
     public decimal Amount { get; set; }
     public DateTime DateTime { get; set; }
+    public string ServiceName { get; set; }
+    public string ServiceType { get; set; }
+    public DateTime TransactionDate { get; set; }
 }

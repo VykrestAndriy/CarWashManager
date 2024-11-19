@@ -11,5 +11,12 @@ namespace CarWashManager.DataAccess.RepositoriesWash.Wash
         Task Create(WashEntity entity);
         Task Update(WashEntity entity);
         Task Delete(string WashId);
+
+        // Додані методи для роботи з транзакціями
+        Task<TransactionEntity?> GetTransactionById(string transactionId);
+        Task CreateTransaction(TransactionEntity transactionEntity);
+        Task DeleteTransaction(string transactionId);
+        Task<ReadOnlyCollection<TransactionEntity>> GetTodayTransactions();
+        Task<ReadOnlyCollection<TransactionEntity>> GetAllTransactions();
     }
 }

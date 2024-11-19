@@ -46,3 +46,9 @@ D:\Labwork\PPPV\API\CarWashManager\CarWashManager\obj\Debug\net6.0\refint\CarWas
 D:\Labwork\PPPV\API\CarWashManager\CarWashManager\obj\Debug\net6.0\CarWashManager.pdb
 D:\Labwork\PPPV\API\CarWashManager\CarWashManager\obj\Debug\net6.0\CarWashManager.genruntimeconfig.cache
 D:\Labwork\PPPV\API\CarWashManager\CarWashManager\obj\Debug\net6.0\ref\CarWashManager.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\Scrutor.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\Scrutor.AspNetCore.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\System.Text.Json.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
