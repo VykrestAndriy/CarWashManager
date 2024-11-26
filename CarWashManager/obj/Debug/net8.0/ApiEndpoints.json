@@ -1,0 +1,253 @@
+[
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "Remove",
+    "RelativePath": "CarWashManager/{CarWashTransactionId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarWashTransactionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "Add",
+    "RelativePath": "CarWashManager/addCarWashTransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CarWashManager.Models.Washs.CreateWashRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "AddCarWashTransaction"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "GetCarWashTransactions",
+    "RelativePath": "CarWashManager/get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CarWashManager.Core.Dtos.TransactionDto, CarWashManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCarWashTransactions"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "GetCarWashTransactionById",
+    "RelativePath": "CarWashManager/getById/{CarWashTransactionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarWashTransactionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CarWashManager.Core.Dtos.TransactionDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetCarWashTransactionById"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "GetTodayCarWashTransactions",
+    "RelativePath": "CarWashManager/getTodayCarWashTransactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CarWashManager.Core.Dtos.TransactionDto, CarWashManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetTodayCarWashTransactions"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.CarWashManagerController",
+    "Method": "ProcessTransaction",
+    "RelativePath": "CarWashManager/processCarWashTransaction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CarWashManager.Models.Washs.CreateWashRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ProcessCarWashTransaction"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "Add",
+    "RelativePath": "Wash",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CarWashManager.Models.Washs.CreateWashRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "Update",
+    "RelativePath": "Wash",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CarWashManager.Models.Washs.UpdateWashRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "Remove",
+    "RelativePath": "Wash/{WashId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WashId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "CloneWash",
+    "RelativePath": "Wash/clone/{WashId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WashId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WashDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "GetWash",
+    "RelativePath": "Wash/get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WashDto, CarWashManager.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWash"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "GetWashById",
+    "RelativePath": "Wash/getById/{WashId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WashId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WashDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWashById"
+  },
+  {
+    "ContainingType": "CarWashManager.Controllers.WashController",
+    "Method": "SingletonAction",
+    "RelativePath": "Wash/singleton-action",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
