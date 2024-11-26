@@ -3,6 +3,8 @@ using CarWashManager.BusinessLogic.Dtos;
 using CarWashManager.DataAccess.Entities;
 using CarWashManager.DataAccess.RepositoriesWash.Wash;
 using CarWashManager.Infrastructure.Enums;
+using CarWashManager.BusinessLogic.Services;
+using CarWashManager.BusinessLogic.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -160,10 +162,10 @@ namespace CarWashManager.BusinessLogic.Services
                 return TransactionDto.Default;
 
             return new TransactionDto(
-                transaction.TransactionId,         
-                transaction.WashId,                
+                transaction.TransactionId,
+                transaction.WashId,
                 transaction.TransactionType,
-                transaction.Amount,                
+                transaction.Amount,
                 transaction.TransactionDate
             );
         }
@@ -176,10 +178,10 @@ namespace CarWashManager.BusinessLogic.Services
 
             return todayTransactions.Select(t => new TransactionDto(
                 transactionId: t.TransactionId,
-                washId: t.WashId,               
-                type: t.TransactionType,         
-                amount: t.Amount,               
-                transactionTime: t.TransactionDate 
+                washId: t.WashId,
+                type: t.TransactionType,
+                amount: t.Amount,
+                transactionTime: t.TransactionDate
             )).ToList().AsReadOnly();
         }
 
@@ -196,7 +198,7 @@ namespace CarWashManager.BusinessLogic.Services
                     return new TransactionDto(
                         t.TransactionId,
                         t.ServiceName,
-                        serviceType,     
+                        serviceType,
                         t.Amount,
                         t.TransactionDate
                     );
@@ -208,6 +210,29 @@ namespace CarWashManager.BusinessLogic.Services
             });
         }
 
+        // Додано метод для перевірок перед додаванням
+        public async Task AddWithChecks(WashDto wash)
+        {
+            if (wash == WashDto.Default)
+                return;
 
+            // Створюємо ланцюг обробників
+            var handler = new AmountCheckHandler();
+            handler.SetNext(new DiscountCheckHandler());
+
+            // Перевіряємо за допомогою обробників
+            await handler.HandleRequest(wash);
+
+            // Додаємо після перевірки
+            await _washRepository.Create(new WashEntity
+            {
+                WashId = wash.WashId,
+                Type = wash.WashType,
+                ServiceType = wash.ServiceType,
+                ServiceName = wash.ServiceName,
+                Amount = wash.Amount,
+                WashTime = DateTime.UtcNow
+            });
+        }
     }
 }

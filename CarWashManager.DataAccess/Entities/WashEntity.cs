@@ -1,9 +1,11 @@
 ﻿using CarWashManager.Infrastructure.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace CarWashManager.DataAccess.Entities
 {
     public class WashEntity
     {
+        [Key]
         public string WashId { get; init; }
         public decimal Price { get; set; }
 

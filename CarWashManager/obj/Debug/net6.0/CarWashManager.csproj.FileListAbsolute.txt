@@ -52,3 +52,4 @@ D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\Scrutor.AspNe
 D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\System.Text.Json.dll
 D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\Labwork\PPPV\API\CarWashManager\CarWashManager\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll

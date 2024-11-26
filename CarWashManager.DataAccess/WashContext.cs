@@ -1,66 +1,55 @@
-﻿using Microsoft.EntityFrameworkCore;
-using CarWashManager.DataAccess.Entities;
+﻿using CarWashManager.DataAccess.Entities;
 using CarWashManager.Infrastructure.Enums;
+using Microsoft.EntityFrameworkCore;
 
-namespace CarWashManager.DataAccess.Entities
+public class WashContext : DbContext
 {
-    public class WashContext : DbContext
+    public DbSet<WashEntity> Washs { get; set; }
+    public DbSet<TransactionEntity> Transactions { get; set; }
+
+    public WashContext(DbContextOptions<WashContext> options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        public DbSet<WashEntity> Washs { get; set; }
-        public DbSet<TransactionEntity> Transactions { get; set; }
+        modelBuilder.Entity<WashEntity>()
+            .HasKey(w => w.WashId);
 
-        public static void Seed(WashContext context)
-        {
-            context.Washs.AddRange(
-                new WashEntity
-                {
-                    WashId = "1",
-                    Price = 25.50m,
-                    Type = WashType.FullService,
-                    LastModified = DateTime.Now
-                },
-                new WashEntity
-                {
-                    WashId = "2",
-                    Price = 40.00m,
-                    Type = WashType.ExteriorOnly,
-                    LastModified = DateTime.Now
-                },
-                new WashEntity
-                {
-                    WashId = "3",
-                    Price = 30.00m,
-                    Type = WashType.InteriorOnly,
-                    LastModified = DateTime.Now
-                });
+        modelBuilder.Entity<TransactionEntity>()
+            .HasOne(w => w.Wash) 
+            .WithMany() 
+            .HasForeignKey(t => t.WashId); 
+    }
 
-            context.Transactions.AddRange(
-                new TransactionEntity
-                {
-                    TransactionId = "1",
-                    WashId = "1",
-                    TransactionType = TransactionType.Successfully,
-                    Amount = 1,
-                    DateTime = DateTime.Now
-                },
-                new TransactionEntity
-                {
-                    TransactionId = "2",
-                    WashId = "2",
-                    TransactionType = TransactionType.Successfully,
-                    Amount = 1,
-                    DateTime = DateTime.Now
-                },
-                new TransactionEntity
-                {
-                    TransactionId = "3",
-                    WashId = "3",
-                    TransactionType = TransactionType.Successfully,
-                    Amount = 1,
-                    DateTime = DateTime.Now
-                });
-
-            context.SaveChanges();
-        }
+    public static void Seed(WashContext context)
+    {
+        context.Washs.AddRange(
+            new WashEntity
+            {
+                WashId = "1",
+                Price = 25.50m,
+                Type = WashType.FullService,
+                Detergent = "DetergentType1",
+                ServiceName = "Full Service",
+                LastModified = DateTime.Now
+            },
+            new WashEntity
+            {
+                WashId = "2",
+                Price = 40.00m,
+                Type = WashType.ExteriorOnly,
+                Detergent = "DetergentType2",
+                ServiceName = "Exterior Wash",
+                LastModified = DateTime.Now
+            },
+            new WashEntity
+            {
+                WashId = "3",
+                Price = 30.00m,
+                Type = WashType.InteriorOnly,
+                Detergent = "DetergentType3",
+                ServiceName = "Interior Wash",
+                LastModified = DateTime.Now
+            });
+        context.SaveChanges();
     }
 }
