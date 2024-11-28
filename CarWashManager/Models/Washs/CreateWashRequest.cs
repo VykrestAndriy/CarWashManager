@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using CarWashManager.Infrastructure.Enums;
+using CarWashManager.Core.Enums;
 
 namespace CarWashManager.Models.Washs;
 

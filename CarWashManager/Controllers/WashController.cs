@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using CarWashManager.BusinessLogic.Contracts;
-using CarWashManager.BusinessLogic.Dtos;
+using CarWashManager.Core.Contracts;
 using CarWashManager.Models.Washs;
 using CarWashManager.BuisnessLogic.Singleton;
+using CarWashManager.Core.Dtos;
 
 namespace CarWashManager.Controllers
 {

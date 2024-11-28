@@ -1,6 +1,6 @@
-﻿using CarWashManager.Infrastructure.Enums;
+﻿using CarWashManager.Core.Enums;
 using System.ComponentModel.DataAnnotations;
-using CarWashManager.DataAccess.Entities;
+using CarWashManager.Core.Entities;
 
 namespace CarWashManager.Models.Transactions;
 

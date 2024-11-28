@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using CarWashManager.BusinessLogic.Contracts;
-using CarWashManager.BusinessLogic.Dtos;
+using CarWashManager.Application.Adapters;
+using CarWashManager.Core.Contracts;
+using CarWashManager.Core.Dtos;
 using CarWashManager.Models.Washs;
-using CarWashManager.BusinessLogic.Adapters;
 
 namespace CarWashManager.Controllers
 {

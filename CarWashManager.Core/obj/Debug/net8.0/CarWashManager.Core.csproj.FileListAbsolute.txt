@@ -1,0 +1,12 @@
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\bin\Debug\net8.0\CarWashManager.Core.deps.json
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\bin\Debug\net8.0\CarWashManager.Core.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\bin\Debug\net8.0\CarWashManager.Core.pdb
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.csproj.AssemblyReference.cache
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.AssemblyInfoInputs.cache
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.AssemblyInfo.cs
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.csproj.CoreCompileInputs.cache
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\refint\CarWashManager.Core.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\CarWashManager.Core.pdb
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Core\obj\Debug\net8.0\ref\CarWashManager.Core.dll

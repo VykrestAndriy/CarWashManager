@@ -1,0 +1,17 @@
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.csproj.AssemblyReference.cache
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.AssemblyInfoInputs.cache
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.AssemblyInfo.cs
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.csproj.CoreCompileInputs.cache
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Application.deps.json
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Application.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Application.pdb
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Core.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Infrastructure.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Core.pdb
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\bin\Debug\net8.0\CarWashManager.Infrastructure.pdb
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashM.5C00E589.Up2Date
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\refint\CarWashManager.Application.dll
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\CarWashManager.Application.pdb
+D:\Labwork\PPPV\APIcleanArhitecture\CarWashManager\CarWashManager.Application\obj\Debug\net8.0\ref\CarWashManager.Application.dll
